@@ -1,0 +1,187 @@
+/* --- Global Styles --- */
+body {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: white;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  
+  align-items: center;
+ 
+}
+
+/* --- Pokedex Container --- */
+.App {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 25px;
+
+  text-align: center;
+ 
+  overflow: hidden;
+}
+
+/* --- Input and Button --- */
+input[type="text"] {
+   
+  padding: 15px;
+  border: 2px solid #a8dadc;
+  border-radius: 10px;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  background-color: #1d3557;
+  color: #ffffff;
+}
+
+input[type="text"]::placeholder {
+  color: #a8dadc;
+}
+
+input[type="text"]:focus {
+  border-color: #457b9d;
+  box-shadow: 0 0 15px rgba(69, 123, 157, 0.3);
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #c9323c;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* --- Pokémon List Grid --- */
+.pokemon-list-ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  gap: 60px;
+  padding: 0;
+  margin-top: 30px;
+  list-style: none;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* --- Pokémon Card --- */
+.pokemon-item {
+  background-color: #f1faee;
+  padding: 25px;
+  border: 2px solid #457b9d;
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+.pokemon-item:hover {
+  transform: scale(1.05);
+  background-color: #dff7f6;
+}
+
+/* --- Pokémon Image --- */
+.pokemon-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .pokemon-list-ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-list-ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  input[type="text"], button {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .pokemon-item img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.pokemon-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination-controls button {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #c9323c;
+  transform: translateY(-2px);
+}
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.pokedex-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokemon-display img{
+  height: 180px;
+  width: 180px;
+}
