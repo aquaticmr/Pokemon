@@ -86,7 +86,7 @@ function App() {
       <div className="pokemon-section">
         <ul className="pokemon-list-ul">
           {pokemonList.map((p, index) => (
-            <li key={index} className="pokemon-item" onMouseEnter={() => setQuery(p.name)} onClick={searchPokemon}>
+            <li key={index} className="pokemon-item" onMouseEnter={() => setQuery(p.name)} onmouseleave={() => setQuery("")} onClick={searchPokemon}>
               {p.name}
               <br />
               <img src={p.sprites?.front_default} alt={p.name} />
